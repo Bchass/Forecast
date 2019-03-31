@@ -1,11 +1,18 @@
 window.addEventListener('load', ()=> {
   let long;
   let lat;
+
   const temperatureDescription = document.querySelector(".temperature-description");
   const temperatureDegree = document.querySelector(".temperature-degree");
-  const locationTimeZone = document.querySelector(".location-timezone");
   const temperatureSection = document.querySelector(".temperature");
   const temperatureSpan = document.querySelector(".temperature span");
+
+  const locationTimeZone = document.querySelector(".location-timezone");
+
+  const windGustSection= document.querySelector(".windGust");
+  const windGustSpan = document.querySelector(".windGust span");
+
+
 
   // Gets current location
   if(navigator.geolocation){
@@ -24,17 +31,17 @@ window.addEventListener('load', ()=> {
           return response.json();
         })
         .then(data => {
-          const { temperature, summary, icon }= data.currently;
+          const { temperature, summary, windGust, icon }= data.currently;
 
           //Set DOM Elements from the api
           temperatureDegree.textContent = temperature;
           temperatureDescription.textContent = summary;
           locationTimeZone.textContent = data.timezone;
 
+          windGustSection.textContent = windGust;
+
           // Formula for celisus
           let celisus = (temperature - 32) * (5/9);
-
-          let fahrenheit = (temperatureDegree);
 
           // Set icon
           setIcons(icon, document.querySelector(".icon"));
@@ -42,7 +49,6 @@ window.addEventListener('load', ()=> {
           // Change temp between celsius/farhient
           temperatureSection.addEventListener('click', ()=>{
             if(temperatureSpan.textContent === "F"){
-              temperatureDegree.textContent = Math.round(fahrenheit);
               temperatureSpan.textContent = "C";
               temperatureDegree.textContent = Math.floor(celisus);
             }else{
