@@ -1,6 +1,8 @@
 # Forecast
 Weather Forecast app
 
-Using darksky api for data
+.Darksky api: https://darksky.net/dev
 
-cors-anywhere for a proxy to bypass localhost
+.cors-anywhere for a proxy to bypass localhost: https://cors-anywhere.herokuapp.com/
+
+.Icons: https://darkskyapp.github.io/skycons/
