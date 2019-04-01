@@ -14,16 +14,22 @@ body{
   font-family: sans-serif;
   color: white;
 }
-.location,
+.location{
+  height: 30vh;
+  width: 50%;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
 .temperature{
   height: 30vh;
   width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .temperature{
-  flex-direction: column;
+  flex-direction: row;
 }
 .degree-section{
   display: flex;
@@ -31,6 +37,10 @@ body{
   cursor: pointer;
 }
 .degree-section span{
+  margin: 10px;
+  font-size: 30px;
+}
+.degree-section p{
   margin: 10px;
   font-size: 30px;
 }
@@ -53,8 +63,10 @@ body{
   cursor: pointer;
 }
 .gust-section span{
+  text-align: right;
   margin: 10px;
   font-size: 30px;
+  display:block;
 }
 .gust-section h3{
   font-size: 40px;
