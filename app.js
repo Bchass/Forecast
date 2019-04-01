@@ -10,7 +10,6 @@ window.addEventListener('load', ()=> {
   const locationTimeZone = document.querySelector(".location-timezone");
 
   const windGustSection= document.querySelector(".windGust");
-  const windGustSpan = document.querySelector(".windGust span");
 
 
 
@@ -46,7 +45,7 @@ window.addEventListener('load', ()=> {
           // Set icon
           setIcons(icon, document.querySelector(".icon"));
 
-          // Change temp between celsius/farhient
+          // Change temp between celisus/fahrenheit
           temperatureSection.addEventListener('click', ()=>{
             if(temperatureSpan.textContent === "F"){
               temperatureSpan.textContent = "C";
@@ -54,7 +53,7 @@ window.addEventListener('load', ()=> {
             }else{
               temperatureSpan.textContent = "F";
               // Gets temp back from api
-              temperatureDegree.textContent = temperature;
+              temperatureDegree.textContent = Math.round (temperature);
             }
           })
 console.log(data);
