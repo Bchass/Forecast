@@ -47,27 +47,3 @@ body{
 .degree-section h2{
   font-size: 40px;
 }
-.windGust{
-  height: 10vh;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.windGust{
-  flex-direction: column;
-}
-.gust-section{
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.gust-section span{
-  text-align: right;
-  margin: 10px;
-  font-size: 30px;
-  display:block;
-}
-.gust-section h3{
-  font-size: 40px;
-}

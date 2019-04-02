@@ -9,7 +9,6 @@ window.addEventListener('load', ()=> {
 
   const locationTimeZone = document.querySelector(".location-timezone");
 
-  const windGustSection= document.querySelector(".windGust");
 
 
 
@@ -30,14 +29,13 @@ window.addEventListener('load', ()=> {
           return response.json();
         })
         .then(data => {
-          const { temperature, summary, windGust, icon }= data.currently;
+          const { temperature, summary, icon }= data.currently;
 
           //Set DOM Elements from the api
           temperatureDegree.textContent = temperature;
           temperatureDescription.textContent = summary;
           locationTimeZone.textContent = data.timezone;
 
-          windGustSection.textContent = windGust;
 
           // Formula for celisus
           let celisus = (temperature - 32) * (5/9);
