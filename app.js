@@ -123,7 +123,7 @@ fetch(api)
     return response.json();
   })
   .then(data => {
-    const { summary, icon }= data.daily;
+    const { summary }= data.daily;
 
     dailyDescription.textContent = summary;
 
