@@ -66,9 +66,6 @@ console.log(data);
 
 // Hourly data
 
-let long;
-let lat;
-
 const hourlyTemperature = document.querySelector(".hourly-temp");
 const hourlyDescription = document.querySelector(".hourly-description");
 
