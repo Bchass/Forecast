@@ -36,8 +36,7 @@ window.addEventListener('load', ()=> {
         .then(data => {
           const { temperature, summary, icon }= data.currently;
 
-
-          //Set DOM Elements from the api
+          // Current
           temperatureDegree.textContent = temperature;
           temperatureDescription.textContent = summary;
           locationTimeZone.textContent = data.timezone;
@@ -50,6 +49,7 @@ window.addEventListener('load', ()=> {
             .then(data => {
               const { summary }= data.hourly;
 
+              // Hourly
               hourlyDescription.textContent = summary;
 
               // Daily data
@@ -60,6 +60,7 @@ window.addEventListener('load', ()=> {
                 .then(data => {
                   const { summary }= data.daily;
 
+                  // Daily
                   dailyDescription.textContent = summary;
 
           // Formula for celisus
