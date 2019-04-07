@@ -9,6 +9,10 @@ window.addEventListener('load', () => {
   const temperatureSpan = document.querySelector(".temperature span");
   const locationTimeZone = document.querySelector(".location-timezone");
 
+  // minutely
+  const minutelyTemperature = document.querySelector(".minutely-temp");
+  const minutelyDescription = document.querySelector(".minutely-description");
+
   // Hourly
   const hourlyTemperature = document.querySelector(".hourly-temp");
   const hourlyDescription = document.querySelector(".hourly-description");
@@ -44,6 +48,19 @@ window.addEventListener('load', () => {
           temperatureDegree.textContent = temperature;
           temperatureDescription.textContent = summary;
           locationTimeZone.textContent = data.timezone;
+
+          // Minutely data
+          fetch(api)
+            .then(response => {
+              return response.json();
+            })
+            .then(data => {
+              const {
+                summary
+              } = data.minutely;
+
+              // minutely
+              minutelyDescription.textContent = summary;
 
 
           // Hourly data
@@ -103,5 +120,6 @@ window.addEventListener('load', () => {
         return skycons.set(iconID, Skycons[currentIcon]);
       }
     });
-  };
-});
+  });
+};
+})
