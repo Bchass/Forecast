@@ -7,6 +7,6 @@
 
 *.* Icons: https://darkskyapp.github.io/skycons/
 
-*.* jquery: http://jquery.com/download/
+~*.* jquery: http://jquery.com/download/~
 
 *Note: Run on a server or local server*
