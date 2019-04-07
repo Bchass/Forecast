@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
       lat = position.coords.latitude;
 
       // proxy to overide localhost
-      const proxy = "https://cors-anywhere.herokuapp.com/"
+      const proxy = "https://cors-anywhere.herokuapp.com/";
       // api for data
       const api = `${proxy}https://api.darksky.net/forecast/a7bc488da17321434c36f41fe7c48b07/${lat},${long}`;
 
@@ -105,11 +105,11 @@ window.addEventListener('load', () => {
                       // Gets temp back from api
                       temperatureDegree.textContent = Math.round(temperature);
                     }
-                  })
+                  });
                   console.log(data);
                 });
             });
-        })
+        });
       // Format for skyicons
       function setIcons(icon, iconID) {
         const skycons = new Skycons({
@@ -121,5 +121,5 @@ window.addEventListener('load', () => {
       }
     });
   });
-};
-})
+}
+});
