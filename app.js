@@ -9,16 +9,10 @@ window.addEventListener('load', () => {
   const temperatureSpan = document.querySelector(".temperature span");
   const locationTimeZone = document.querySelector(".location-timezone");
 
-  // minutely
-  const minutelyTemperature = document.querySelector(".minutely-temp");
   const minutelyDescription = document.querySelector(".minutely-description");
 
-  // Hourly
-  const hourlyTemperature = document.querySelector(".hourly-temp");
   const hourlyDescription = document.querySelector(".hourly-description");
 
-  // Daily
-  const dailyTemperature = document.querySelector(".daily-temp");
   const dailyDescription = document.querySelector(".daily-description");
 
   // Gets current location
