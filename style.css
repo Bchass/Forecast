@@ -57,7 +57,7 @@ body {
   height: 4px;
   background-color: lightsteelblue;
   margin: 6px; 
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .change .bar1{
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
