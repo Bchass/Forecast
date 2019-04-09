@@ -9,6 +9,19 @@ initial-scale=1.0" />
 
 <body>
 
+   <!--Hamburger menu div-->
+ <div class="container" onclick="HBfunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    </div>
+    
+    <!--Hamburger menu function-->
+    <script>
+    function HBfunction(x){
+      x.classList.toggle("change");
+    }
+    </script>
   <div class="location">
     <h1 class="location-timezone">Timezone</h1>
     <canvas class="icon" width="128" height="128"></canvas>
@@ -21,7 +34,8 @@ initial-scale=1.0" />
     </div>
     <div class="temperature-description">It's cold</div>
   </div>
-
+  
+  <!--Nested divs for descriptions-->
  <div id="Main">
   <div class="minutely-temp">
     <div class="minutely-description">placeholder2</div>
@@ -43,7 +57,7 @@ initial-scale=1.0" />
 
   <script src="skycons.js">
   </script>
-
+  
 </body>
 
 </html>
