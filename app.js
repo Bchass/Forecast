@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 window.addEventListener('load', () => {
   let long;
   let lat;
@@ -20,11 +22,11 @@ window.addEventListener('load', () => {
     navigator.geolocation.getCurrentPosition(position => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
-
+ß
       // proxy to overide localhost
       const proxy = "https://cors-anywhere.herokuapp.com/";
       // api for data
-      const api = `${proxy}${lat},${long}`;
+      const api = process.env.API`${proxy}${lat},${long}`;
 
       // Current data
       fetch(api)
