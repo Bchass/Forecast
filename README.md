@@ -10,3 +10,5 @@
 ~- jquery: http://jquery.com/download/~
 
 - Note: Run on a server or local server*
+
+# (Archived due to Dark Skys API shutting down soon)
